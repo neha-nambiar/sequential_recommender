@@ -13,10 +13,13 @@ This project demonstrates the use of BERT4Rec for next-item prediction on a shop
 
 ## Project Structure
 
-- **data/**: This directory contains the raw data files used in the project.
-  - `sessions.csv`: Contains session data including user interactions with products.
-  - `products.csv`: Contains product details such as titles, prices, and other attributes.
-
+- **data/**: This directory contains the raw and processed data files used in the project.
+  - `processed/`:
+    - `sessions.csv`: Cleaned sessions data.
+    - `products.csv`: Cleaned products data.
+  - `raw/`:
+    - `sessions_train.csv`: Contains session data including user interactions with products.
+    - `products_train.csv`: Contains product details such as titles, prices, and other attributes.
 - **src/**: Source code for the project including data processing, model definition, training, evaluation, and loading.
   - `data_preprocessing.py`: Script for preprocessing session and product data, converting them into tensors for model input.
   - `model.py`: Contains the BERT4Rec model definition.
@@ -25,7 +28,7 @@ This project demonstrates the use of BERT4Rec for next-item prediction on a shop
   - `load_model.py`: Script for loading the trained model and necessary components for inference or further training.
 
 - **notebooks/**: Jupyter Notebooks for exploratory data analysis (EDA).
-  - `exploratory_data_analysis.ipynb`: Notebook containing visualizations and analysis of the dataset to gain insights and validate preprocessing steps.
+  - `exploratory_data_analysis.ipynb`: Notebook containing cleaning and analysis of the dataset to gain insights and validate preprocessing steps.
 
 - **saved_models/**: Directory to save and store trained models and their components.
   - `bert4rec_model/`: Directory where the trained BERT4Rec model and related files (such as encoders and tokenizers) are saved.
